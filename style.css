@@ -1,0 +1,1007 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+html { 
+    scroll-behavior: smooth;             /* Desplazamiento fluido a secciones */
+}
+
+* { 
+    margin: 0;                           /* Sin margen externo */
+    padding: 0;                          /* Sin relleno interno */
+    box-sizing: border-box;              /* Borde incluido en ancho */
+    font-family: 'Arial', sans-serif;    /* Fuente principal */
+}
+
+:root { 
+    --azul-900: #0d47a1;                 /* Azul más oscuro para textos de alta confianza */
+    --azul-800: #1565c0;                 /* Azul profundo para encabezados */
+    --azul-700: #1976d2;                 /* Azul principal para botones y realce */
+    --azul-600: #1e88e5;                 /* Azul intermedio */
+    --azul-500: #2196f3;                 /* Azul brillante para elementos activos */
+    --azul-400: #42a5f5;                 /* Azul claro para realces */
+    --azul-300: #64b5f6;                 /* Azul suave para iconos */
+    --azul-200: #90caf9;                 /* Celeste de apoyo para bordes */
+    --azul-100: #bbdefb;                 /* Celeste claro para fondos de cajas */
+    --azul-fondo: #e3f2fd;               /* Fondo celeste muy suave para secciones */
+    --fucsia: #f32169;                   /* Color fucsia para botones de acción */
+    --blanco: #ffffff;                   /* Color blanco base */
+}
+
+/* BOTONES COMO ENLACES */
+.boton-navegacion, 
+.boton-principal, 
+.boton-empezar { 
+    display: inline-block;               /* Enlace como bloque */
+    text-decoration: none;               /* Quita subrayado */
+    text-align: center;                  /* Texto centrado */
+    cursor: pointer;                     /* Mano al pasar ratón */
+}
+
+/* ENCABEZADO */
+.encabezado { 
+    width: 100%;                         /* Ancho total */
+    height: 80px;                        /* Altura cabecera */
+    display: flex;                       /* Caja flexible */
+    align-items: center;                 /* Alineado vertical */
+    background: var(--blanco);           /* Fondo blanco */
+    border-bottom: 1px solid #f0f0f0;    /* Línea inferior */
+}
+
+.contenedor-cabecera { 
+    width: 90%;                          /* Ancho 90% */
+    max-width: 1300px;                   /* Máximo ancho PC */
+    margin: 0 auto;                      /* Centrado horizontal */
+    display: flex;                       /* Caja flexible */
+    justify-content: space-between;      /* Elementos a extremos */
+    align-items: center;                 /* Alineado vertical */
+}
+
+.logotipo img { 
+    height: 60px;                        /* Altura logo */
+    object-fit: contain;                 /* Sin deformar logo */
+}
+
+.boton-navegacion { 
+    background-color: var(--fucsia);     /* Fondo fucsia */
+    color: var(--blanco);                /* Texto blanco */
+    padding: 12px 28px;                  /* Relleno */
+    border-radius: 8px;                  /* Bordes curvos */
+    font-weight: bold;                   /* Texto negrita */
+}
+
+/* SECCIÓN 1: HERO */
+.seccion1 { 
+    background-color: var(--azul-700);   /* Fondo azul principal */
+    padding: 30px 0;                     /* Relleno vertical */
+    color: var(--blanco);                /* Texto blanco */
+    overflow: hidden;                    /* Oculta carrusel sobrante */
+    display: flex;                       /* Caja flexible */
+    align-items: center;                 /* Alineado vertical */
+}
+
+.contenedor-hero { 
+    width: 90%;                          /* Ancho 90% */
+    max-width: 1200px;                   /* Máximo ancho hero */
+    margin: 0 auto;                      /* Centrado horizontal */
+}
+
+.hero-contenido-superior { 
+    display: flex;                       /* Fila flexible */
+    justify-content: space-between;      /* Elementos separados */
+    align-items: center;                 /* Alineado vertical */
+    gap: 30px;                           /* Espacio entre columnas */
+}
+
+.hero-bloque-texto { 
+    flex: 1.2;                           /* Columna texto más ancha */
+    text-align: left;                    /* Texto a izquierda */
+    max-width: 600px;                    /* Límite texto */
+}
+
+.hero-bloque-texto h1 { 
+    font-size: 2.5rem;                   /* Título grande */
+    line-height: 1.1;                    /* Altura de línea */
+    margin-bottom: 15px;                 /* Espacio inferior */
+}
+
+.hero-bloque-texto p { 
+    font-size: 1.2rem;                   /* Párrafo visible */
+    margin-bottom: 30px;                 /* Espacio antes de botón */
+    opacity: 0.95;                       /* Suavizado blanco */
+}
+
+.boton-principal { 
+    background-color: var(--fucsia);     /* Fondo fucsia */
+    color: var(--blanco);                /* Texto blanco */
+    border: none;                        /* Sin borde */
+    padding: 18px 45px;                  /* Botón grande */
+    border-radius: 6px;                  /* Esquinas redondeadas */
+    font-size: 1.2rem;                   /* Texto grande */
+    font-weight: bold;                   /* Negrita */
+}
+
+.carrusel-galeria { 
+    flex: 0.8;                           /* Columna carrusel */
+    width: 100%;                         /* Ancho total */
+    overflow: hidden;                    /* Recorta imágenes */
+    border-radius: 12px;                 /* Esquinas curvas */
+    background: rgba(0,0,0,0.1);         /* Fondo gris tenue */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Sombra */
+}
+
+.carrusel-tira { 
+    display: flex;                       /* Fila de imágenes */
+    width: 300%;                         /* Ancho para 3 imágenes */
+    animation: moverCarrusel 6s infinite ease-in-out; /* Velocidad carrusel */
+}
+
+.carrusel-tira img { 
+    width: 33.333%;                      /* Cada imagen un tercio */
+    height: auto;                        /* Alto proporcional */
+    object-fit: cover;                   /* Rellena sin estirar */
+    display: block;                      /* Elemento bloque */
+}
+
+@keyframes moverCarrusel { 
+    0%, 28% { transform: translateX(0); } 
+    33%, 61% { transform: translateX(-33.333%); } 
+    66%, 94% { transform: translateX(-66.666%); } 
+    100% { transform: translateX(0); } 
+}
+
+/* SECCIÓN 2: TABS */
+.seccion2 { 
+    background-color: var(--azul-fondo); /* Fondo azul pálido */
+    padding: 40px 0;                     /* Relleno vertical */
+    text-align: center;                  /* Centrado de texto */
+}
+
+.contenedor-seccion2 { 
+    max-width: 1000px;                   /* Ancho máximo */
+    margin: 0 auto;                      /* Centrado */
+    padding: 0 20px;                     /* Seguridad móvil */
+}
+
+.titulo-principal-s2 { 
+    color: var(--azul-900);              /* Azul más oscuro */
+    font-size: 2rem;                     /* Título h2 */
+    margin-bottom: 10px;                 /* Margen inferior */
+}
+
+.subtitulo-s2 { 
+    color: var(--azul-800);              /* Azul profundo para subtítulo */
+    margin-bottom: 40px;                 /* Distancia hacia las pestañas */
+}
+
+.pestanas-principales { 
+    display: flex;                       /* Menú horizontal */
+    background: var(--blanco);           /* Fondo blanco tarjeta */
+    border-radius: 10px;                 /* Curva menú */
+    margin-bottom: 30px;                 /* Espacio inferior */
+    overflow: hidden;                    /* Recorta bordes internos */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra estética */
+    padding: 5px;                        /* Espacio interno suave */
+}
+
+.boton-pestana { 
+    flex: 1;                             /* Divide espacio */
+    padding: 15px;                       /* Relleno interno */
+    border: none;                        /* Sin borde */
+    background: none;                    /* Sin fondo inactivo */
+    font-weight: bold;                   /* Negrita */
+    color: var(--azul-700);              /* Azul corporativo inactivo */
+    cursor: pointer;                     /* Cursor interactivo */
+    transition: 0.3s;                    /* Cambio suave */
+    border-radius: 8px;                  /* Curva interna */
+}
+
+.boton-pestana.activo { 
+    background: var(--azul-100);         /* Fondo celeste activo */
+    color: var(--azul-900);              /* Texto azul oscuro */
+    box-shadow: none;                    /* Sin sombra interna */
+}
+
+/* CONTENIDO TABS (ESTILO TARJETA BLANCA) */
+#tab-requisitos, #tab-prestamos {
+    background: var(--blanco);           /* Fondo blanco tarjeta */
+    padding: 30px;                       /* Relleno interno amplio */
+    border-radius: 15px;                 /* Bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra elegante */
+    text-align: left;                    /* Alineación interna */
+}
+
+.sub-pestanas { 
+    display: flex;                       /* Fila de subtabs */
+    justify-content: space-around;       /* Distribución equilibrada */
+    border-bottom: 2px solid var(--azul-200); /* Línea base azul */
+    margin-bottom: 30px;                 /* Espacio inferior */
+}
+
+.boton-sub-pestana { 
+    padding: 10px 20px;                  /* Relleno */
+    background: none;                    /* Sin fondo */
+    border: none;                        /* Sin borde */
+    color: #888;                         /* Gris inactivo */
+    cursor: pointer;                     /* Mano ratón */
+    font-weight: bold;                   /* Negrita */
+}
+
+.boton-sub-pestana.activo { 
+    color: var(--azul-700);              /* Azul para activo */
+    border-bottom: 3px solid var(--azul-700); /* Marca inferior azul */
+}
+
+.lista-checks { 
+    list-style: none;                    /* Sin viñetas */
+    text-align: left;                    /* Texto alineado izquierda */
+    margin-bottom: 30px;                 /* Margen inferior */
+}
+
+.lista-checks li { 
+    padding: 12px 0 12px 35px;           /* Relleno texto */
+    position: relative;                  /* Posición para icono */
+    color: #333;                         /* Color texto */
+    font-size: 1rem;                     /* Tamaño fuente */
+}
+
+.lista-checks li::before { 
+    content: '✓';                        /* Símbolo check */
+    position: absolute;                  /* Posición flotante */
+    left: 0;                             /* A la izquierda */
+    color: var(--azul-500);              /* Turquesa para los checks */
+    font-weight: bold;                   /* Negrita */
+    font-size: 1.1rem;                   /* Tamaño check */
+}
+
+/* BOTÓN EMPEZAR (CORREGIDO: MÁS PEQUEÑO Y ESTÉTICO) */
+.boton-empezar { 
+    background-color: var(--azul-700);   /* Fondo azul principal */
+    color: var(--blanco);                /* Texto blanco */
+    border: none;                        /* Sin bordes */
+    padding: 12px 25px;                  /* Relleno reducido y estético */
+    border-radius: 8px;                  /* Esquinas curvas */
+    width: 100%;                         /* Ocupa todo el ancho */
+    font-size: 1rem;                     /* Texto tamaño estándar */
+    font-weight: bold;                   /* Negrita */
+    cursor: pointer;                     /* Mano al pasar ratón */
+    transition: background 0.3s;         /* Efecto suave */
+}
+
+.tarjeta-prestamo { 
+    display: flex;                       /* Alineado horizontal tarjeta */
+    align-items: center;                 /* Centrado vertical */
+    background: var(--blanco);           /* Fondo blanco */
+    padding: 20px;                       /* Relleno interno */
+    border-radius: 12px;                 /* Curva tarjeta */
+    border: 1px solid var(--azul-200);   /* Borde azul tenue */
+    text-align: left;                    /* Texto izquierda */
+    margin-bottom: 15px;                 /* Separación entre tarjetas */
+}
+
+.tarjeta-prestamo img { 
+    width: 60px;                         /* Icono ancho fijo */
+    height: 60px;                        /* Icono alto fijo */
+    margin-right: 20px;                  /* Espacio a la derecha */
+}
+
+.informacion-tarjeta h3 { 
+    font-size: 1.1rem;                   /* Título interno */
+    color: var(--azul-900);              /* Azul oscuro */
+    margin-bottom: 5px;                  /* Espacio inferior */
+}
+
+.informacion-tarjeta p { 
+    font-size: 0.9rem;                   /* Texto secundario */
+    color: #666;                         /* Gris suave */
+}
+
+.contenido-pestana-principal, 
+.contenido-sub-pestana { 
+    display: none;                       /* Oculta contenido inactivo */
+}
+
+.contenido-pestana-principal.activo, 
+.contenido-sub-pestana.activo { 
+    display: block;                      /* Muestra contenido activo */
+}
+
+/* SECCIÓN 3: PROCESO */
+.seccion3 { 
+    background-color: var(--blanco);     /* Fondo blanco puro */
+    padding: 40px 0;                     /* Espaciado vertical */
+    text-align: center;                  /* Centra títulos */
+}
+
+.contenedor-seccion3 { 
+    max-width: 1000px;                   /* Ancho máximo */
+    margin: 0 auto;                      /* Centrado horizontal */
+    padding: 0 20px;                     /* Seguridad móvil */
+}
+
+.Titulo-S3 { 
+    color: var(--azul-900);              /* Azul oscuro confianza */
+    font-size: 2rem;                     /* Título h2 */
+    margin-bottom: 15px;                 /* Margen inferior */
+    font-weight: bold;                   /* Negrita */
+}
+
+.subtitulo-s3 { 
+    color: var(--azul-700);              /* Azul corporativo subtítulo */
+    font-size: 1.1rem;                   /* Tamaño medio */
+    margin-bottom: 60px;                 /* Espacio antes de los pasos */
+}
+
+.texto-azul { 
+    color: var(--azul-800);              /* Azul oscuro para realce de texto */
+    font-weight: bold;                   /* Negrita */
+}
+
+.contenedor-pasos { 
+    display: flex;                       /* Columna vertical de pasos */
+    flex-direction: column;              /* Orden descendente */
+    gap: 40px;                           /* Distancia entre pasos */
+    max-width: 850px;                    /* Ancho de lectura */
+    margin: 0 auto;                      /* Centrado */
+}
+
+.item-paso { 
+    display: flex;                       /* Fila paso */
+    align-items: center;                 /* Centrado vertical */
+    text-align: left;                    /* Texto izquierda */
+    gap: 30px;                           /* Espacio círculo-texto */
+}
+
+.icono-paso img { 
+    width: 100px;                        /* Imagen circulo fija */
+    height: 100px;                       /* Imagen circulo fija */
+    border-radius: 50%;                  /* Forma redonda */
+}
+
+.texto-paso h3 { 
+    color: var(--azul-900);              /* Azul oscuro subtítulo paso */
+    font-size: 1.1rem;                   /* Título pequeño */
+    margin-bottom: 8px;                  /* Margen inferior */
+}
+
+.texto-paso p { 
+    color: #666;                         /* Texto gris */
+    font-size: 1rem;                     /* Fuente base */
+    line-height: 1.5;                    /* Espaciado entre líneas */
+}
+
+/* SECCIÓN 4: TESTIMONIOS */
+.seccion-testimonios { 
+    background-color: var(--blanco);     /* Fondo blanco */
+    padding: 40px 0;                     /* Relleno vertical */
+    text-align: center;                  /* Centrado de título */
+}
+
+.contenedor-seccion4 { 
+    max-width: 1200px;                   /* Ancho máximo */
+    margin: 0 auto;                      /* Centrado horizontal */
+    padding: 0 20px;                     /* Seguridad lateral */
+}
+
+.titulo-seccion4 { 
+    color: var(--azul-900);              /* Azul oscuro h2 */
+    font-size: 2rem;                     /* Título h2 */
+    font-weight: bold;                   /* Negrita */
+}
+
+.rejilla-testimonios { 
+    display: flex;                       /* Fila de testimonios */
+    gap: 30px;                           /* Espacio tarjetas */
+    justify-content: center;             /* Centrado horizontal */
+    flex-wrap: wrap;                     /* Salto en móvil */
+}
+
+.bloque-testimonio { 
+    flex: 1;                             /* Crecen igual */
+    min-width: 250px;                    /* Mínimo ancho móvil */
+    align-items: flex-start;             /* Alineado izquierda interno */
+    display: flex;                       /* Caja flexible */
+    flex-direction: column;              /* Vertical */
+}
+
+.burbuja-texto { 
+    background: #f4f4f4;                 /* Gris burbuja */
+    padding: 25px;                       /* Relleno */
+    border-radius: 10px;                 /* Esquinas burbuja */
+    position: relative;                  /* Para el pico burbuja */
+    margin-bottom: 25px;                 /* Espacio antes de foto */
+    min-height: 150px;                   /* Altura uniforme */
+}
+
+.burbuja-texto::after { 
+    content: "";                         /* Pico burbuja chat */
+    position: absolute;                  /* Flotante */
+    bottom: -15px;                       /* Debajo de caja */
+    left: 30px;                          /* A la izquierda */
+    border-width: 15px 15px 0;           /* Triángulo */
+    border-style: solid;                 /* Línea sólida */
+    border-color: #f4f4f4 transparent transparent; /* Color burbuja */
+}
+
+.cliente-info { 
+    display: flex;                       /* Foto y nombre fila */
+    align-items: center;                 /* Centrado vertical */
+    gap: 15px;                           /* Espacio entre foto-nombre */
+    padding-left: 10px;                  /* Ajuste visual */
+}
+
+.cliente-info img { 
+    width: 50px;                         /* Foto pequeña */
+    height: 50px;                        /* Foto pequeña */
+    border-radius: 50%;                  /* Foto redonda */
+    object-fit: cover;                   /* Sin deformar cara */
+}
+
+.nombre-cliente { 
+    color: var(--azul-900);              /* Azul oscuro nombre */
+    font-weight: bold;                   /* Negrita */
+}
+
+/* =========================================
+   SECCIÓN 5: PREGUNTAS (DISEÑO MODERNO)
+   ========================================= */
+
+.seccion-preguntas { 
+    background-color: var(--azul-fondo); /* Fondo suave más agradable */
+    padding-top: 30px;                   /* Más aire superior */
+    padding-bottom: 30px;                /* Más aire inferior */
+    text-align: left;                    /* Texto alineado izquierda */
+}
+
+.contenedor-preguntas { 
+    max-width: 900px;                    /* Ancho lectura optimizado */
+    margin: 0 auto;                      /* Centrado horizontal */
+    padding: 0 20px;                     /* Seguridad móvil */
+}
+
+.titulo-preguntas { 
+    color: var(--azul-900);              /* Azul corporativo título */
+    font-size: 2.2rem;                   /* Título más grande y moderno */
+    margin-bottom: 50px;                 /* Separación amplia */
+    text-align: center;                  /* Título centrado para balance */
+    font-weight: bold;                   /* Negrita */
+}
+
+/* Tarjeta individual de pregunta */
+.item-acordeon { 
+    background: var(--blanco);           /* Fondo blanco puro */
+    border: none;                        /* Sin bordes duros */
+    border-radius: 12px;                 /* Curva moderna y suave */
+    margin-bottom: 20px;                 /* Espacio entre tarjetas */
+    overflow: hidden;                    /* Oculta respuesta cerrada */
+    transition: all 0.3s ease;           /* Animación fluida completa */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03); /* Sombra sutil inicial */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.item-acordeon:hover {
+    transform: translateY(-3px);         /* Efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* Sombra más fuerte al flotar */
+}
+
+/* Estado activo (Pregunta abierta) */
+.item-acordeon.activo {
+    box-shadow: 0 10px 25px rgba(33, 150, 243, 0.15); /* Resplandor azulado */
+}
+
+.encabezado-pregunta { 
+    padding: 25px 30px;                  /* Espacio interno amplio */
+    cursor: pointer;                     /* Mano ratón */
+    font-weight: bold;                   /* Negrita */
+    font-size: 1.1rem;                   /* Texto ligeramente más grande */
+    color: var(--azul-900);              /* Azul oscuro */
+    display: flex;                       /* Caja flexible */
+    justify-content: space-between;      /* Flecha a derecha */
+    align-items: center;                 /* Centrado vertical */
+    transition: color 0.3s;              /* Transición color texto */
+}
+
+.encabezado-pregunta:hover {
+    color: var(--azul-500);              /* Azul vibrante al pasar mouse */
+}
+
+.flecha { 
+    border: solid var(--azul-500);       /* Icono flecha turquesa */
+    border-width: 0 3px 3px 0;           /* Flecha más gruesa y visible */
+    padding: 5px;                        /* Tamaño pico */
+    display: inline-block;               /* Permite transform */
+    transform: rotate(45deg);            /* Pico hacia abajo */
+    transition: transform 0.3s ease;     /* Animación giro suave */
+    margin-left: 15px;                   /* Separación del texto */
+}
+
+.respuesta-pregunta { 
+    max-height: 0;                       /* Cerrado inicialmente */
+    overflow: hidden;                    /* Recorta sobrante */
+    transition: max-height 0.4s ease-out; /* Velocidad apertura suave */
+}
+
+.item-acordeon.activo .respuesta-pregunta { 
+    max-height: 1000px;                  /* Altura suficiente para contenido */
+}
+
+.item-acordeon.activo .flecha { 
+    transform: rotate(-135deg);          /* Gira flecha hacia arriba */
+    border-color: var(--azul-700);       /* Oscurece flecha al activar */
+}
+
+.contenido-interno { 
+    padding-top: 0;                      /* Sin relleno superior extra */
+    padding-bottom: 30px;                /* Relleno inferior cómodo */
+    padding-left: 30px;                  /* Alineado con título */
+    padding-right: 30px;                 /* Alineado con título */
+    color: #555;                         /* Gris oscuro lectura */
+    line-height: 1.6;                    /* Altura de línea legible */
+    font-size: 1rem;                     /* Tamaño base */
+} 
+/* --- FIN SECCIÓN 5 --- */
+
+
+/* =========================================
+   SECCIÓN 6: SIMULADOR
+   ========================================= */
+
+.seccion-simulador { 
+    background-color: #f4f7ff;           /* Azul pálido simulador */
+    padding: 40px 0;                     /* Relleno vertical */
+    text-align: center;                  /* Centrado elementos */
+}
+
+.contenedor-simulador { 
+    max-width: 800px;                    /* Ancho simulador */
+    margin: 0 auto;                      /* Centrado horizontal */
+    padding: 0 20px;                     /* Seguridad móvil */
+}
+
+#formulario-datos { 
+    background: var(--blanco);           /* Blanco formulario */
+    padding: 30px;                       /* Relleno interno */
+    border-radius: 15px;                 /* Curva elegante */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra suave */
+    margin-bottom: 20px;                 /* Separación inferior */
+}
+
+.campo-grupo { 
+    text-align: left;                    /* Labels a izquierda */
+    margin-bottom: 20px;                 /* Espacio entre campos */
+}
+
+.campo-grupo label { 
+    display: block;                      /* Ocupa toda su fila */
+    font-weight: bold;                   /* Negrita label */
+    color: var(--azul-900);              /* Azul corporativo */
+    margin-bottom: 8px;                  /* Espacio antes de input */
+}
+
+.campo-grupo input { 
+    width: 100%;                         /* Ancho total */
+    padding: 12px;                       /* Altura cómoda */
+    border: 1px solid var(--azul-200);   /* Borde celeste suave */
+    border-radius: 8px;                  /* Curva input */
+}
+
+.calculadora-oculta { 
+    display: none;                       /* Invisible antes de enviar */
+    animation: fadeIn 0.5s ease;         /* Efecto suave */
+}
+
+.panel-control { 
+    display: grid;                       /* Rejilla inputs */
+    grid-template-columns: 1fr 1fr;      /* Dos columnas */
+    gap: 20px;                           /* Espacio entre cajas */
+    margin-bottom: 30px;                 /* Margen antes de tarjeta */
+}
+
+.input-simulador { 
+    background: var(--blanco);           /* Fondo caja blanca */
+    padding: 20px;                       /* Relleno */
+    border-radius: 12px;                 /* Curva suave */
+    text-align: left;                    /* Alineado izquierda */
+    border: 1px solid var(--azul-200);   /* Borde azulado */
+}
+
+.input-simulador input { 
+    width: 100%;                         /* Ancho total */
+    border: none;                        /* Sin borde completo */
+    border-bottom: 2px solid var(--azul-700); /* Solo línea inferior azul */
+    font-size: 1.5rem;                   /* Texto grande */
+    color: var(--azul-700);              /* Azul destacado */
+    font-weight: bold;                   /* Negrita */
+    outline: none;                       /* Sin resaltado azul por defecto */
+    text-align: right;                   /* Alineado derecha */
+}
+
+.tarjeta-resultado { 
+    background: var(--blanco);           /* Fondo tarjeta blanco */
+    padding: 40px 20px;                  /* Relleno generoso */
+    border-radius: 20px;                 /* Muy redondeado estilo premium */
+    border: 2px solid var(--azul-500);   /* Borde turquesa destacado */
+    position: relative;                  /* Para etiqueta flotante */
+    max-width: 400px;                    /* Ancho máximo */
+    margin: 0 auto;                      /* Centrado horizontal */
+}
+
+.monto-final { 
+    font-size: 2.5rem;                   /* Numero cuota muy grande */
+    color: var(--azul-500);              /* Azul turquesa */
+    margin: 15px 0;                      /* Separación vertical */
+}
+
+/* ESTILO NUEVO PARA MONTO NETO DE TRANSPARENCIA */
+#monto-neto {
+    color: var(--azul-800);              /* Azul profundo para monto real */
+    font-weight: bold;                   /* Negrita realce */
+}
+
+.detalles-simulacion p { 
+    display: flex;                       /* Fila de detalles */
+    justify-content: space-between;      /* Concepto y monto a lados */
+    font-size: 0.9rem;                   /* Tamaño informativo */
+    margin: 10px 0;                      /* Margen entre líneas */
+}
+
+.txt-pago-unico { 
+    font-size: 0.75rem;                  /* Fuente legal pequeña */
+    color: var(--fucsia);                /* Fucsia advertencia */
+    font-weight: bold;                   /* Negrita */
+}
+
+.mensaje-negociacion { 
+    background-color: var(--azul-fondo); /* Fondo azul pálido */
+    border-left: 5px solid var(--azul-500); /* Barra lateral turquesa */
+    padding: 20px;                       /* Relleno interno */
+    margin: 30px auto;                   /* Separación vertical */
+    border-radius: 8px;                  /* Esquinas curvas */
+    text-align: left;                    /* Texto izquierda */
+    font-size: 0.95rem;                  /* Tamaño lectura */
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; }                 /* Transparente */
+    to { opacity: 1; }                   /* Visible */
+}
+
+/* SECCIÓN 7: PIE DE PÁGINA (ESTÉTICA RESTAURADA) */
+.pie-pagina { 
+    background-color: var(--blanco);     /* Fondo blanco puro */
+    padding: 20px 0;                     /* Relleno vertical */
+    border-top: 1px solid #f0f0f0;     /* Línea divisoria */
+}
+
+.contenedor-footer { 
+    max-width: 1100px;                   /* Ancho máximo alineado */
+    margin: 0 auto;                      /* Centrado */
+    padding: 0 20px;                     /* Seguridad lateral */
+    display: flex;                       /* 2 columnas flexibles */
+    justify-content: space-between;      /* Separación a extremos */
+    align-items: flex-start;             /* Alineado al tope superior */
+    gap: 50px;                           /* Espacio entre columnas */
+}
+
+.columna-footer { 
+    flex: 1;                             /* Divide el espacio equitativo */
+}
+
+/* Columna Izquierda */
+.info-contacto { 
+    text-align: left;                    /* Texto a izquierda */
+}
+
+.footer-logo img { 
+    height: 55px;                        /* Alto logo pie */
+    margin-bottom: 25px;                 /* Margen antes de datos */
+}
+
+.datos-contacto p { 
+    display: flex;                       /* Icono y texto fila */
+    align-items: center;                 /* Centrado vertical */
+    gap: 12px;                           /* Espacio icono-palabra */
+    color: var(--azul-900);              /* Azul oscuro legal */
+    margin-bottom: 15px;                 /* Margen entre líneas */
+    font-size: 0.95rem;                  /* Tamaño cómodo */
+}
+
+.datos-contacto img { 
+    width: 20px;                         /* Tamaño iconos negros */
+    opacity: 0.8;                        /* Suavizado iconos */
+}
+
+.redes-sociales { 
+    margin-top: 25px;                    /* Margen antes de Facebook */
+}
+
+/* Columna Derecha */
+.area-suscripcion { 
+    display: flex;                       /* Caja vertical */
+    flex-direction: column;              /* Orden descendente */
+    gap: 25px;                           /* Espacio boletín-libro */
+}
+
+.caja-boletin { 
+    background-color: #f4f4f4;           /* Fondo gris boletín */
+    padding: 30px;                       /* Relleno caja gris */
+    border-radius: 8px;                  /* Curva caja */
+}
+
+.titulo-boletin { 
+    color: var(--azul-900);              /* Azul oscuro */
+    font-weight: bold;                   /* Negrita título */
+    margin-bottom: 15px;                 /* Margen antes de input */
+    font-size: 1rem;                     /* Fuente estándar */
+    text-align: left;                    /* Título a izquierda */
+}
+
+.form-suscripcion { 
+    display: flex;                       /* Input y OK en fila */
+    background: white;                   /* Fondo interno blanco */
+    border: 1px solid #ddd;              /* Borde gris */
+    border-radius: 4px;                  /* Curva suave */
+    overflow: hidden;                    /* Recorta botón externo */
+}
+
+.form-suscripcion input { 
+    flex: 1;                             /* Ocupa espacio disponible */
+    padding: 12px;                       /* Altura escritura */
+    border: none;                        /* Sin borde interno */
+    outline: none;                       /* Sin resalte azul clic */
+}
+
+.form-suscripcion button { 
+    background-color: var(--azul-700);   /* Botón OK azul principal */
+    color: var(--blanco);                /* Texto blanco */
+    border: none;                        /* Sin borde */
+    padding: 0 25px;                     /* Ancho botón OK */
+    font-weight: bold;                   /* Negrita */
+    cursor: pointer;                     /* Mano ratón */
+}
+
+/* ESTILO NUEVO PARA MENSAJE ÉXITO BOLETÍN */
+.mensaje-exito-boletin {
+    color: var(--azul-500);              /* Azul turquesa agradecimiento */
+    font-weight: bold;                   /* Negrita realce */
+    margin-top: 10px;                    /* Margen superior */
+}
+
+/* Libro (CORREGIDO: CENTRADO) */
+.libro-reclamaciones a { 
+    display: flex;                       /* Logo y texto fila */
+    align-items: center;                 /* Centrado vertical */
+    justify-content: center;             /* NUEVO: Centrado horizontal */
+    gap: 12px;                           /* Espacio logo-letras */
+    text-decoration: none;               /* Quita subrayado */
+    color: var(--azul-800);              /* Azul texto legal */
+    font-size: 0.85rem;                  /* Fuente pequeña legal */
+    font-weight: bold;                   /* Resaltado */
+}
+
+.libro-reclamaciones img { 
+    width: 85px;                         /* Tamaño logo oficial libro */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) { 
+    .hero-contenido-superior, 
+    .rejilla-testimonios, 
+    .panel-control,
+    .contenedor-footer { 
+        flex-direction: column;          /* Cambio a vertical móvil */
+        align-items: center;             /* Centrado total móvil */
+        text-align: center;              /* Texto al centro móvil */
+    }
+    
+    .columna-footer, 
+    .info-contacto { 
+        width: 100%;                     /* Ocupa todo el ancho */
+        text-align: center;              /* Texto centrado móvil */
+    }
+    
+    .datos-contacto p { 
+        text-align: center;              /* Datos centrados móvil */
+        justify-content: center;         /* Iconos centrados móvil */
+    }
+
+    .item-paso { 
+        flex-direction: column;          /* Pasos vertical móvil */
+    }
+
+    .Titulo-S3 { 
+        font-size: 1.3rem;               /* Título h2 más pequeño móvil */
+    }
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS: LIBRO DE RECLAMACIONES
+   ========================================= */
+
+.seccion-libro {
+    background-color: var(--azul-fondo); /* Fondo suave */
+    padding: 10px 0;
+    min-height: 100vh;
+}
+
+.contenedor-libro {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    border-top: 5px solid var(--azul-700); /* Detalle superior corporativo */
+}
+
+/* Cabecera del formulario */
+.cabecera-libro {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+.titulo-libro {
+    color: var(--azul-900);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fecha-actual {
+    color: var(--azul-700);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.info-legal {
+    font-size: 0.9rem;
+    color: #666;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Estructura del Formulario */
+.bloque-form {
+    margin-bottom: 30px;
+}
+
+.subtitulo-libro {
+    background-color: var(--azul-700);
+    color: var(--blanco);
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Grid para campos (2 columnas en PC) */
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo-libro {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+}
+
+/* Estilos de inputs específicos del libro */
+.campo-libro label {
+    font-weight: bold;
+    color: var(--azul-900);
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.campo-libro input,
+.campo-libro textarea {
+    padding: 12px;
+    border: 1px solid var(--azul-200); /* Borde azul suave */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border 0.3s;
+}
+
+.campo-libro input:focus,
+.campo-libro textarea:focus {
+    border-color: var(--azul-500);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Radio buttons y Definiciones */
+.radio-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f4f7ff;
+    border-radius: 6px;
+}
+
+.radio-group label {
+    color: var(--azul-900);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.definicion-reclamo {
+    font-size: 0.85rem;
+    color: #555;
+    background: #fff3cd; /* Fondo amarillo suave para alerta/info */
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.definicion-reclamo p {
+    margin-bottom: 5px;
+}
+
+/* Términos finales */
+.bloque-terminos {
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.check-legal {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--azul-900);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.nota-legal-pie {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* Responsive para el libro */
+@media (max-width: 768px) {
+    .contenedor-libro {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .grid-form {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* --- BARRA COPYRIGHT (Footer) --- */
+.barra-copyright {
+    text-align: center;                  /* Texto centrado */
+    margin-top: 10px;                    /* Separación de las columnas superiores */
+    padding-top: 10px;                   /* Espacio interno superior */
+    border-top: 1px solid #eee;        /* Línea gris suave divisoria */
+    color: #888;                       /* Color de texto gris profesional */
+    font-size: 0.9rem;                   /* Tamaño de letra discreto */
+    width: 90%;                          /* Ancho relativo */
+    max-width: 1100px;                   /* Mismo ancho máximo que el resto */
+    margin-left: auto;                   /* Centrado automático bloque */
+    margin-right: auto;                  /* Centrado automático bloque */
+}

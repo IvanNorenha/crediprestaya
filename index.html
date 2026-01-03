@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrediPrestaYA - Préstamos con Garantía Hipotecaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor-cabecera">
+            <div class="logotipo">
+                <a href="index.html">
+                    <img src="./imagenes/logo1.png" alt="Logo CrediPrestaYA">
+                </a>
+            </div>
+            <a href="#simulador" class="boton-navegacion" style="text-decoration: none;">Simular</a>
+        </div>
+    </header>
+
+    <section class="seccion1">
+        <div class="contenedor-hero">
+            <div class="hero-contenido-superior">
+                <div class="hero-bloque-texto">
+                    <h1>Préstamos con <br> garantía hipotecaria</h1>
+                    <p>Obtén dinero para progresar y cumple tus sueños <br> con una solicitud 100% digital</p>
+                    <a href="#simulador" class="boton-principal" style="text-decoration: none;">Simula tu préstamo</a>
+                </div>
+                <div class="carrusel-galeria">
+                    <div class="carrusel-tira">
+                        <img src="./imagenes/a.png" alt="Imagen 1">
+                        <img src="./imagenes/b.jpg" alt="Imagen 2">
+                        <img src="./imagenes/c.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion2">
+        <div class="contenedor-seccion2">
+            <div class="titulos-seccion2">
+                <h2 class="titulo-principal-s2">Haz realidad tus proyectos hoy mismo</h2>
+                <p class="subtitulo-s2">Elige el destino de tu dinero y obtén el capital que necesitas con las mejores condiciones del mercado.</p>
+            </div>
+
+            <div class="pestanas-principales">
+                <button class="boton-pestana activo" onclick="abrirPestanaPrincipal(event, 'tab-requisitos')">Requisitos</button>
+                <button class="boton-pestana" onclick="abrirPestanaPrincipal(event, 'tab-prestamos')">Soluciones</button>
+            </div>
+
+            <div id="tab-requisitos" class="contenido-pestana-principal activo">
+                <div class="sub-pestanas">
+                    <button class="boton-sub-pestana activo" onclick="abrirSubPestana(event, 'caracteristicas')">Características</button>
+                    <button class="boton-sub-pestana" onclick="abrirSubPestana(event, 'requisitos-det')">Requisitos</button>
+                    <button class="boton-sub-pestana" onclick="abrirSubPestana(event, 'beneficios')">Beneficios</button>
+                </div>
+
+                <div id="caracteristicas" class="contenido-sub-pestana activo">
+                    <ul class="lista-checks">
+                        <li><strong>Montos altos:</strong> Desde S/ 40,000 hasta S/ 800,000 (o su cambio en dólares).</li>
+                        <li><strong>Tasa competitiva:</strong> Intereses preferentes desde el 19% anual.</li>
+                        <li><strong>Flexibilidad total:</strong> Incluye periodos de gracia, cuotas comodín y amortización a tu medida.</li>
+                        <li><strong>Respaldo continuo:</strong> Te acompañamos desde la solicitud hasta la cancelación de tu crédito.</li>
+                        <li><strong>Plazo extendido:</strong> Tienes hasta 10 años (120 meses) para pagar cómodamente.</li>
+                        <li><strong>Liquidez rápida:</strong> Desembolso efectivo en tu cuenta entre 7 y 10 días.</li>
+                    </ul>
+                </div>
+
+                <div id="requisitos-det" class="contenido-sub-pestana">
+                    <ul class="lista-checks">
+                        <li>Contar con un inmueble en Lima y Callao.</li>
+                        <li>El inmueble debe estar correctamente inscrito en registros públicos.</li>
+                        <li>Contar con algún sustento de ingresos, formal o informal pero sí bancarizado.</li>
+                    </ul>
+                </div>
+
+                <div id="beneficios" class="contenido-sub-pestana">
+                    <ul class="lista-checks">
+                        <li><strong>Evaluación Flexible:</strong> ¿Estás en Infocorp? No te preocupes. Valoramos tu garantía inmobiliaria por encima de tu historial crediticio o sustento formal.</li>
+                        <li><strong>Pagos a tu Ritmo:</strong> Diseña tu plan ideal. Elige plazos de hasta 120 meses, periodos de gracia o cuotas comodín para pagar con total tranquilidad.</li>
+                        <li><strong>Transparencia Total:</strong> Juega limpio y seguro. Sin comisiones ocultas ni letras chicas; todo se firma ante notario y con asesoría experta.</li>
+                        <li><strong>Agilidad Digital:</strong> Olvídate de la burocracia bancaria. Inicia tu trámite 100% online desde casa y recibe tu desembolso en tiempo récord.</li>
+                    </ul>
+                </div>
+                <a href="#simulador" class="boton-empezar" style="text-decoration: none;">Empezar simulación de préstamo</a>
+            </div>
+
+            <div id="tab-prestamos" class="contenido-pestana-principal">
+                <div class="rejilla-prestamos">
+                    <div class="tarjeta-prestamo">
+                        <img src="./imagenes/1.png" alt="Empresario">
+                        <div class="informacion-tarjeta">
+                            <h3>Impulsa el crecimiento de tu negocio</h3>
+                            <p>Inyecta capital inteligente para inventario, maquinaria o expansión local. Haz que tu empresa facture más desde hoy.</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-prestamo">
+                        <img src="./imagenes/2.png" alt="Deudas">
+                        <div class="informacion-tarjeta">
+                            <h3>Recupera tu tranquilidad financiera</h3>
+                            <p>¿Las cuotas te ahogan? Unifica todas tus deudas en una sola, reduce los intereses y paga hasta un 40% menos al mes.</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-prestamo">
+                        <img src="./imagenes/3.png" alt="Vivienda">
+                        <div class="informacion-tarjeta">
+                            <h3>Construye o remodela la casa de tus sueños</h3>
+                            <p>Construye ese segundo piso o moderniza tus acabados. Aumenta el valor de tu propiedad con los mejores plazos del mercado.</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-prestamo">
+                        <img src="./imagenes/4.png" alt="Libre">
+                        <div class="informacion-tarjeta">
+                            <h3>Efectivo inmediato para lo que necesites</h3>
+                            <p>Sin explicaciones. Financia viajes, estudios o imprevistos de salud. Tu dinero, tus reglas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion3">
+        <div class="contenedor-seccion3">
+            <div class="titulos-seccion3">
+                <h2 class="Titulo-S3">Obtén tu capital en 4 pasos sencillos</h2>
+                <p class="subtitulo-s3">Olvídate de la burocracia. Hemos simplificado el proceso para que tengas tu dinero en tiempo récord.</p>
+            </div>
+            <div class="contenedor-pasos">
+                <div class="item-paso">
+                    <div class="icono-paso"><img src="./imagenes/5.png" alt="1"></div>
+                    <div class="texto-paso">
+                        <h3>1. Solicitud Express:</h3>
+                        <p>Completa el formulario en minutos para pre-calificar tu inmueble y recibir una asesoría inicial gratuita.</p>
+                    </div>
+                </div>
+                <div class="item-paso">
+                    <div class="icono-paso"><img src="./imagenes/6.png" alt="2"></div>
+                    <div class="texto-paso">
+                        <h3>2. Propuesta Inmediata:</h3>
+                        <p>Analizamos tu garantía y te presentamos una oferta clara con las mejores tasas y plazos del mercado.</p>
+                    </div>
+                </div>
+                <div class="item-paso">
+                    <div class="icono-paso"><img src="./imagenes/7.png" alt="3"></div>
+                    <div class="texto-paso">
+                        <h3>3. Gestión Ágil:</h3>
+                        <p>Nosotros nos encargamos de coordinar la tasación y revisar la documentación legal. Tú relájate.</p>
+                    </div>
+                </div>
+                <div class="item-paso">
+                    <div class="icono-paso"><img src="./imagenes/8.png" alt="4"></div>
+                    <div class="texto-paso">
+                        <h3>4. Firma y Desembolso:</h3>
+                        <p>Firmamos en notaría con total seguridad y transferimos el dinero a tu cuenta de inmediato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-testimonios">
+        <div class="contenedor-seccion4">
+            <div class="cabecera-testimonios">
+                <h2 class="titulo-seccion4">Testimonios</h2>
+            </div>
+            <div class="rejilla-testimonios">
+                <div class="bloque-testimonio">
+                    <div class="burbuja-texto">
+                        <p>"Necesitaba capital urgente para la campaña navideña y el banco demoraba demasiado. Con ustedes conseguí el desembolso en 8 días y pude triplicar mi inventario a tiempo. ¡Gracias por la agilidad!"</p>
+                    </div>
+                    <div class="cliente-info">
+                        <img src="./imagenes/11.png" alt="Lisset Manrique">
+                        <span class="nombre-cliente">Lisset Manrique</span>
+                    </div>
+                </div>
+                <div class="bloque-testimonio">
+                    <div class="burbuja-texto">
+                        <p>"Estaba ahogada pagando 4 tarjetas de crédito diferentes. Unificaron todas mis deudas en una sola y ahora mi cuota mensual bajó casi un 40%. Por fin puedo dormir tranquila."</p>
+                    </div>
+                    <div class="cliente-info">
+                        <img src="./imagenes/10.png" alt="Antonio Maguiña">
+                        <span class="nombre-cliente">Antonio Maguiña</span>
+                    </div>
+                </div>
+                <div class="bloque-testimonio">
+                    <div class="burbuja-texto">
+                        <p>"Tenía miedo de poner mi casa en garantía, pero la asesoría legal fue tan clara y transparente que me dieron total confianza. Todo fue ante notario y sin letras chicas. 100% recomendados."</p>
+                    </div>
+                    <div class="cliente-info">
+                        <img src="./imagenes/9.png" alt="Luzvenia Martinez">
+                        <span class="nombre-cliente">Luzvenia Martinez</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-preguntas">
+        <div class="contenedor-preguntas">
+            <h2 class="titulo-preguntas">Preguntas frecuentes</h2>
+            <div class="acordeon">
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Qué tipo de soluciones financieras ofrecen?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Brindamos préstamos con garantía hipotecaria de libre disponibilidad. Tú decides si usas el capital para tu negocio, consolidar deudas, construir o invertir.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Quién me presta el dinero?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>En CrediprestaYa gestionamos fondos de inversión privada. Conectamos tu necesidad de capital con inversionistas validados, garantizando un proceso seguro y formal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Por qué confiar en CrediprestaYa?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Nos respaldan años de trayectoria y cientos de clientes satisfechos. Todo nuestro proceso es 100% transparente, legal y se firma obligatoriamente ante Notario Público.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Son mejores que un banco tradicional?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Somos más rápidos y flexibles. A diferencia del banco, nosotros no te descartamos por estar en Infocorp y aprobamos tu solicitud en días, no en meses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Dónde están ubicadas sus oficinas?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Nuestra sede principal está en Lima, pero atendemos de forma digital y presencial para agilizar tu trámite donde te encuentres.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Puedo solicitar el préstamo si estoy en Infocorp?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>¡Sí! Tu historial crediticio no es determinante. Para nosotros, la garantía de tu inmueble es el respaldo principal para aprobar tu financiamiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Qué requisitos debe tener mi propiedad?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>El inmueble debe estar inscrito en SUNARP (título de propiedad) y ubicado en zonas urbanas de Lima o principales ciudades. Evaluamos casas, departamentos o locales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Necesito demostrar ingresos formales?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>No es obligatorio tener boletas de pago. Evaluamos tu capacidad de pago real, aceptando ingresos de negocios propios, emprendimientos o rentas informales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Cuánto dinero me pueden prestar?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Nuestros desembolsos van desde S/ 40,000 hasta S/ 800,000 (o su equivalente en dólares), dependiendo del valor comercial de tu inmueble.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Qué porcentaje del valor de mi casa financian?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Generalmente otorgamos hasta el 30% o 40% del valor de tasación de la propiedad, asegurando que la cuota sea manejable para ti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿En cuánto tiempo recibo mi dinero?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Sabemos que te urge. Nuestro proceso está optimizado para desembolsar entre 7 a 10 días hábiles, una vez presentada la documentación completa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Hasta cuántos años puedo pagar?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Te ofrecemos los plazos más extensos del sector: tienes hasta 120 meses (10 años) para pagar tu préstamo con total comodidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Puedo pagar mi deuda antes de tiempo?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Sí, tienes libertad total. Puedes amortizar capital o cancelar la deuda completa en cualquier momento sin penalidades ni comisiones sorpresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Hay gastos ocultos o adelantados?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Ninguno. No pedimos dinero por adelantado. Los gastos notariales y registrales son transparentes y se coordinan al momento de la firma o desembolso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-acordeon">
+                    <div class="encabezado-pregunta" onclick="alternarPregunta(this)">
+                        <span>¿Qué pasa si tengo problemas para pagar una cuota?</span><i class="flecha"></i>
+                    </div>
+                    <div class="respuesta-pregunta">
+                        <div class="contenido-interno">
+                            <p>Somos tus aliados. Si tienes un imprevisto, contáctanos de inmediato para buscar una solución o reprogramación antes de generar moras innecesarias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-simulador" id="simulador">
+        <div class="contenedor-simulador">
+            <h2 class="Titulo-S3">Simula tu cuota mensual</h2>
+            <p class="subtitulo-s3">Completa tus datos para ver nuestras opciones para ti</p>
+
+            <form id="formulario-datos" action="https://formsubmit.co/ajax/info@crediprestaya.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="paso-datos">
+                    <div class="campo-grupo">
+                        <label>Correo electrónico</label>
+                        <input type="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="dni">DNI</label>
+                        <input type="text" id="dni" name="dni" maxlength="8" inputmode="numeric" placeholder="12345678" required>
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="celular">Celular</label>
+                        <input type="text" id="celular" name="celular" maxlength="9" inputmode="numeric" placeholder="999 999 999" required>
+                    </div>
+                    <button type="submit" class="boton-empezar">Ver mi simulación ahora</button>
+                </div>
+            </form>
+
+            <div id="calculadora-interactiva" class="calculadora-oculta">
+                <div class="panel-control">
+                    <div class="input-simulador">
+                        <label>Valor total del inmueble (S/.)</label>
+                        <input type="text" id="valor-inmueble" value="100,000" oninput="formatearYCalcular(this)">
+                    </div>
+                    <div class="input-simulador">
+                        <label>Monto que necesitas (S/.)</label>
+                        <input type="text" id="monto-solicitado" value="30,000" oninput="formatearYCalcular(this)">
+                    </div>
+                </div>
+                <div class="rejilla-resultados">
+                    <div class="tarjeta-resultado recomendada">
+                        <div class="etiqueta-recomendado">RECOMENDADO</div>
+                        <p class="txt-cuota">Tu cuota mensual de interés sería:</p>
+                        <h3 id="cuota-mensual" class="monto-final">S/ 900.00</h3>
+                        <div class="detalles-simulacion">
+                            <p><span>Tasa mensual:</span> 3%</p>
+                            <p><span>Gastos (10%):</span> <small id="gastos-adm">S/ 3,000.00</small></p>
+                            <p><span>Uso Plataforma (3%):</span> <small id="gasto-plataforma">S/ 900.00</small></p>
+                            <p><span>Monto neto a recibir:</span> <strong id="monto-neto">S/ 26,100.00</strong></p>
+                            <hr>
+                            <p class="txt-pago-unico">*Gastos y plataforma descontados al desembolso</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mensaje-negociacion">
+                    🤝 <strong>Nota importante:</strong> Esta simulación muestra una cuota referencial bajo la modalidad de <strong>pago solo intereses.</strong> ¡Tenemos más opciones! También contamos con planes de <strong>Capital + Intereses</strong> (amortización) que se ajustan a tu medida.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-footer">
+            <div class="columna-footer info-contacto">
+                <div class="footer-logo">
+                    <img src="./imagenes/logo1.png" alt="Logo CrediPrestaYA">
+                </div>
+                <div class="datos-contacto">
+                    <p><img src="https://img.icons8.com/material-outlined/24/000000/mail.png" alt="email"> info@crediprestaya.com</p>
+                    <p><img src="https://img.icons8.com/material-outlined/24/000000/phone.png" alt="tel"> +51 921921116</p>
+                    <p><img src="https://img.icons8.com/material-outlined/24/000000/marker.png" alt="dir"> Av. Circunvalación del Golf Los Incas 134, Surco, Lima.</p>
+                </div>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/infoCrediPrestaYA/" target="_blank">
+                        <img src="https://img.icons8.com/material-rounded/32/0c1e5b/facebook-new.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+            <div class="columna-footer area-suscripcion">
+                <div class="caja-boletin">
+                    <p class="titulo-boletin">¿Quieres suscribirte a nuestro boletín de noticias?</p>
+                    <form id="form-boletin" class="form-suscripcion" action="https://formsubmit.co/ajax/info@crediprestaya.com" method="POST">
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <button type="submit">OK</button>
+                    </form>
+                </div>
+                <div class="libro-reclamaciones">
+                    <a href="libro-de-reclamaciones.html">
+                        <img src="./imagenes/libro reclamaciones.png" alt="Libro de Reclamaciones">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="barra-copyright">
+            <p>© 2024 CrediPrestaYA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
