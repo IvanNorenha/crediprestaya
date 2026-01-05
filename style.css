@@ -11,18 +11,43 @@ html {
 }
 
 :root { 
-    --azul-900: #0d47a1;                 /* Azul más oscuro para textos de alta confianza */
-    --azul-800: #1565c0;                 /* Azul profundo para encabezados */
-    --azul-700: #1976d2;                 /* Azul principal para botones y realce */
-    --azul-600: #1e88e5;                 /* Azul intermedio */
-    --azul-500: #2196f3;                 /* Azul brillante para elementos activos */
-    --azul-400: #42a5f5;                 /* Azul claro para realces */
-    --azul-300: #64b5f6;                 /* Azul suave para iconos */
-    --azul-200: #90caf9;                 /* Celeste de apoyo para bordes */
-    --azul-100: #bbdefb;                 /* Celeste claro para fondos de cajas */
-    --azul-fondo: #e3f2fd;               /* Fondo celeste muy suave para secciones */
-    --fucsia: #f32169;                   /* Color fucsia para botones de acción */
-    --blanco: #ffffff;                   /* Color blanco base */
+    /* --- NUEVA PALETA FINTECH 2025 --- */
+    
+    /* Textos principales y Títulos (Navy oscuro, más elegante que negro) */
+    --azul-900: #0f172a;                 
+    
+    /* Encabezados secundarios */
+    --azul-800: #1e3a8a;                 
+    
+    /* COLOR PRINCIPAL: Botones y Enlaces (Royal Blue - Vibrante y Tecnológico) */
+    --azul-700: #2563eb;                 
+    
+    /* Estados Hover */
+    --azul-600: #3b82f6;                 
+    
+    /* Elementos activos / Iconos (Cyan moderno) */
+    --azul-500: #0ea5e9;                 
+    
+    /* Realces suaves */
+    --azul-400: #60a5fa;                 
+    
+    /* Iconos deshabilitados o sutiles */
+    --azul-300: #94a3b8;                 
+    
+    /* Bordes de inputs y líneas divisorias (Gris azulado) */
+    --azul-200: #cbd5e1;                 
+    
+    /* Fondos de tarjetas activas */
+    --azul-100: #f1f5f9;                 
+    
+    /* Fondo general de la web (Blanco humo muy limpio) */
+    --azul-fondo: #f8fafc;               
+    
+    /* ACCIÓN: Fucsia "Raspberry" (Más profesional, menos neón) */
+    --fucsia: #e11d48;                   
+    
+    /* Blanco puro */
+    --blanco: #ffffff;                   
 }
 
 /* BOTONES COMO ENLACES */
@@ -69,7 +94,7 @@ html {
 
 /* SECCIÓN 1: HERO */
 .seccion1 { 
-    background-color: var(--azul-700);   /* Fondo azul principal */
+    background-color: var(--azul-800);   /* Fondo azul profundo corporativo */
     padding: 30px 0;                     /* Relleno vertical */
     color: var(--blanco);                /* Texto blanco */
     overflow: hidden;                    /* Oculta carrusel sobrante */
@@ -439,110 +464,96 @@ html {
     font-weight: bold;                   /* Negrita */
 }
 
-/* =========================================
-   SECCIÓN 5: PREGUNTAS (DISEÑO MODERNO)
-   ========================================= */
-
+/* SECCIÓN 5: PREGUNTAS (DISEÑO MODERNO) */
 .seccion-preguntas { 
-    background-color: var(--azul-fondo); /* Fondo suave más agradable */
-    padding-top: 30px;                   /* Más aire superior */
-    padding-bottom: 30px;                /* Más aire inferior */
+    background-color: var(--azul-fondo); /* Fondo suave */
+    padding-top: 20px;                   /* Aire superior */
+    padding-bottom: 20px;                /* Aire inferior */
     text-align: left;                    /* Texto alineado izquierda */
 }
 
 .contenedor-preguntas { 
-    max-width: 900px;                    /* Ancho lectura optimizado */
+    max-width: 900px;                    /* Ancho lectura */
     margin: 0 auto;                      /* Centrado horizontal */
     padding: 0 20px;                     /* Seguridad móvil */
 }
 
 .titulo-preguntas { 
     color: var(--azul-900);              /* Azul corporativo título */
-    font-size: 2.2rem;                   /* Título más grande y moderno */
-    margin-bottom: 50px;                 /* Separación amplia */
-    text-align: center;                  /* Título centrado para balance */
+    font-size: 2.2rem;                   /* Título moderno */
+    margin-bottom: 50px;                 /* Margen inferior */
+    text-align: center;                  /* Centrado */
     font-weight: bold;                   /* Negrita */
 }
 
-/* Tarjeta individual de pregunta */
 .item-acordeon { 
-    background: var(--blanco);           /* Fondo blanco puro */
-    border: none;                        /* Sin bordes duros */
-    border-radius: 12px;                 /* Curva moderna y suave */
+    background: var(--blanco);           /* Fondo blanco */
+    border: none;                        /* Sin bordes */
+    border-radius: 12px;                 /* Curva moderna */
     margin-bottom: 20px;                 /* Espacio entre tarjetas */
-    overflow: hidden;                    /* Oculta respuesta cerrada */
-    transition: all 0.3s ease;           /* Animación fluida completa */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.03); /* Sombra sutil inicial */
+    overflow: hidden;                    /* Oculta respuesta */
+    transition: all 0.3s ease;           /* Animación fluida */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03); /* Sombra inicial */
 }
 
-/* Efecto al pasar el mouse (Hover) */
 .item-acordeon:hover {
-    transform: translateY(-3px);         /* Efecto de elevación */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* Sombra más fuerte al flotar */
+    transform: translateY(-3px);         /* Efecto elevación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* Sombra fuerte */
 }
 
-/* Estado activo (Pregunta abierta) */
 .item-acordeon.activo {
-    box-shadow: 0 10px 25px rgba(33, 150, 243, 0.15); /* Resplandor azulado */
+    box-shadow: 0 10px 25px rgba(33, 150, 243, 0.15); /* Resplandor activo */
 }
 
 .encabezado-pregunta { 
-    padding: 25px 30px;                  /* Espacio interno amplio */
+    padding: 25px 30px;                  /* Espacio amplio */
     cursor: pointer;                     /* Mano ratón */
     font-weight: bold;                   /* Negrita */
-    font-size: 1.1rem;                   /* Texto ligeramente más grande */
+    font-size: 1.1rem;                   /* Texto grande */
     color: var(--azul-900);              /* Azul oscuro */
     display: flex;                       /* Caja flexible */
     justify-content: space-between;      /* Flecha a derecha */
     align-items: center;                 /* Centrado vertical */
-    transition: color 0.3s;              /* Transición color texto */
+    transition: color 0.3s;              /* Transición color */
 }
 
 .encabezado-pregunta:hover {
-    color: var(--azul-500);              /* Azul vibrante al pasar mouse */
+    color: var(--azul-500);              /* Azul vibrante hover */
 }
 
 .flecha { 
-    border: solid var(--azul-500);       /* Icono flecha turquesa */
-    border-width: 0 3px 3px 0;           /* Flecha más gruesa y visible */
+    border: solid var(--azul-500);       /* Icono flecha */
+    border-width: 0 3px 3px 0;           /* Flecha gruesa */
     padding: 5px;                        /* Tamaño pico */
     display: inline-block;               /* Permite transform */
-    transform: rotate(45deg);            /* Pico hacia abajo */
-    transition: transform 0.3s ease;     /* Animación giro suave */
-    margin-left: 15px;                   /* Separación del texto */
+    transform: rotate(45deg);            /* Pico abajo */
+    transition: transform 0.3s ease;     /* Animación giro */
+    margin-left: 15px;                   /* Separación */
 }
 
 .respuesta-pregunta { 
-    max-height: 0;                       /* Cerrado inicialmente */
-    overflow: hidden;                    /* Recorta sobrante */
-    transition: max-height 0.4s ease-out; /* Velocidad apertura suave */
+    max-height: 0;                       /* Cerrado inicio */
+    overflow: hidden;                    /* Recorta */
+    transition: max-height 0.4s ease-out; /* Animación */
 }
 
 .item-acordeon.activo .respuesta-pregunta { 
-    max-height: 1000px;                  /* Altura suficiente para contenido */
+    max-height: 1000px;                  /* Altura suficiente */
 }
 
 .item-acordeon.activo .flecha { 
-    transform: rotate(-135deg);          /* Gira flecha hacia arriba */
-    border-color: var(--azul-700);       /* Oscurece flecha al activar */
+    transform: rotate(-135deg);          /* Gira flecha */
+    border-color: var(--azul-700);       /* Oscurece flecha */
 }
 
 .contenido-interno { 
-    padding-top: 0;                      /* Sin relleno superior extra */
-    padding-bottom: 30px;                /* Relleno inferior cómodo */
-    padding-left: 30px;                  /* Alineado con título */
-    padding-right: 30px;                 /* Alineado con título */
-    color: #555;                         /* Gris oscuro lectura */
-    line-height: 1.6;                    /* Altura de línea legible */
+    padding: 0 30px 30px 30px;           /* Relleno cómodo */
+    color: #555;                         /* Gris oscuro */
+    line-height: 1.6;                    /* Altura línea */
     font-size: 1rem;                     /* Tamaño base */
-} 
-/* --- FIN SECCIÓN 5 --- */
+}
 
-
-/* =========================================
-   SECCIÓN 6: SIMULADOR
-   ========================================= */
-
+/* SECCIÓN 6: SIMULADOR */
 .seccion-simulador { 
     background-color: #f4f7ff;           /* Azul pálido simulador */
     padding: 40px 0;                     /* Relleno vertical */
@@ -560,7 +571,7 @@ html {
     padding: 30px;                       /* Relleno interno */
     border-radius: 15px;                 /* Curva elegante */
     box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Sombra suave */
-    margin-bottom: 20px;                 /* Separación inferior */
+    margin-bottom: 40px;                 /* Separación inferior */
 }
 
 .campo-grupo { 
@@ -666,8 +677,8 @@ html {
 /* SECCIÓN 7: PIE DE PÁGINA (ESTÉTICA RESTAURADA) */
 .pie-pagina { 
     background-color: var(--blanco);     /* Fondo blanco puro */
-    padding: 20px 0;                     /* Relleno vertical */
-    border-top: 1px solid #f0f0f0;     /* Línea divisoria */
+    padding: 60px 0;                     /* Relleno vertical */
+    border-top: 1px solid #f0f0f0;       /* Línea divisoria */
 }
 
 .contenedor-footer { 
@@ -780,35 +791,18 @@ html {
     width: 85px;                         /* Tamaño logo oficial libro */
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) { 
-    .hero-contenido-superior, 
-    .rejilla-testimonios, 
-    .panel-control,
-    .contenedor-footer { 
-        flex-direction: column;          /* Cambio a vertical móvil */
-        align-items: center;             /* Centrado total móvil */
-        text-align: center;              /* Texto al centro móvil */
-    }
-    
-    .columna-footer, 
-    .info-contacto { 
-        width: 100%;                     /* Ocupa todo el ancho */
-        text-align: center;              /* Texto centrado móvil */
-    }
-    
-    .datos-contacto p { 
-        text-align: center;              /* Datos centrados móvil */
-        justify-content: center;         /* Iconos centrados móvil */
-    }
-
-    .item-paso { 
-        flex-direction: column;          /* Pasos vertical móvil */
-    }
-
-    .Titulo-S3 { 
-        font-size: 1.3rem;               /* Título h2 más pequeño móvil */
-    }
+/* --- BARRA COPYRIGHT (Footer) --- */
+.barra-copyright {
+    text-align: center;                  /* Texto centrado */
+    margin-top: 10px;                    /* Separación de las columnas superiores */
+    padding-top: 10px;                   /* Espacio interno superior */
+    border-top: 1px solid #eee;          /* Línea gris suave divisoria */
+    color: #888;                         /* Color de texto gris profesional */
+    font-size: 0.9rem;                   /* Tamaño de letra discreto */
+    width: 90%;                          /* Ancho relativo */
+    max-width: 1100px;                   /* Mismo ancho máximo que el resto */
+    margin-left: auto;                   /* Centrado automático bloque */
+    margin-right: auto;                  /* Centrado automático bloque */
 }
 
 /* =========================================
@@ -883,10 +877,12 @@ html {
     gap: 20px;
 }
 
+/* CAMPO LIBRO (CORREGIDO: Espacio inferior para separar bloques) */
 .campo-libro {
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-bottom: 30px; /* Separación vertical entre filas de inputs */
 }
 
 .full-width {
@@ -992,16 +988,33 @@ html {
     }
 }
 
-/* --- BARRA COPYRIGHT (Footer) --- */
-.barra-copyright {
-    text-align: center;                  /* Texto centrado */
-    margin-top: 10px;                    /* Separación de las columnas superiores */
-    padding-top: 10px;                   /* Espacio interno superior */
-    border-top: 1px solid #eee;        /* Línea gris suave divisoria */
-    color: #888;                       /* Color de texto gris profesional */
-    font-size: 0.9rem;                   /* Tamaño de letra discreto */
-    width: 90%;                          /* Ancho relativo */
-    max-width: 1100px;                   /* Mismo ancho máximo que el resto */
-    margin-left: auto;                   /* Centrado automático bloque */
-    margin-right: auto;                  /* Centrado automático bloque */
+/* RESPONSIVE GENERAL */
+@media (max-width: 900px) { 
+    .hero-contenido-superior, 
+    .rejilla-testimonios, 
+    .panel-control,
+    .contenedor-footer { 
+        flex-direction: column;          /* Cambio a vertical móvil */
+        align-items: center;             /* Centrado total móvil */
+        text-align: center;              /* Texto al centro móvil */
+    }
+    
+    .columna-footer, 
+    .info-contacto { 
+        width: 100%;                     /* Ocupa todo el ancho */
+        text-align: center;              /* Texto centrado móvil */
+    }
+    
+    .datos-contacto p { 
+        text-align: center;              /* Datos centrados móvil */
+        justify-content: center;         /* Iconos centrados móvil */
+    }
+
+    .item-paso { 
+        flex-direction: column;          /* Pasos vertical móvil */
+    }
+
+    .Titulo-S3 { 
+        font-size: 1.3rem;               /* Título h2 más pequeño móvil */
+    }
 }
